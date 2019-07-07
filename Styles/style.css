@@ -2,10 +2,39 @@ body {
   margin: 0;
 }
 
-#container {
+.container {
   background: url("../Media/backgroundLarge.png");
   height: 100vh;
   width: auto;
   background-size: cover;
   background-position: center center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 0.3fr; 
+  grid-column-gap: 5%;
+  justify-items: center;
+  align-items: start;
+}
+
+.side {
+  border: 1px solid white;
+  width: 65%;
+  height: 98%;
+  margin-top: 5%;
+}
+
+.leftSide{
+  justify-self: end;
+}
+
+.rightSide{
+  justify-self: start;
+}
+
+.footer{
+  grid-area: 2 / 1 / 3 / 3;
+  width: 65%;
+  height: 50%;
+  border: 1px solid white;
+  margin-top: 5%;
 }

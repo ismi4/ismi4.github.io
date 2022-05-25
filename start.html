@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sass/main.css" />
+    <title>Shop</title>
+  </head>
+  <body>
+    <div id="open-modal" class="modal-window">
+      <div>
+        <a href="#modal-close" title="Close" class="modal-close"
+          >close &times;</a
+        >
+        <h1>CSS Modal</h1>
+        <div>The quick brown fox jumped over the lazy dog.</div>
+      </div>
+    </div>
+    <div class="animate1">
+    <div class="headerBackground"></div>
+    <header class="header">
+      <span class="header__icon"><a href="facebook.com"><img class="header__iconImg" src="./assets/icons/fb.svg" alt="Facebook page"></a></span>
+      <span class="header__icon"><a href="instagram.com"><img class="header__iconImg" src="./assets/icons/in.svg" alt="Instagram page"></a></span>
+      <span class="header__icon"><a href="twitter.com"><img  class="header__iconImg" src="./assets/icons/tw.svg" alt="Twitter page"></a></span>
+    </header>
+     <picture>
+      <source srcset="assets/head/1x/600.png 1x, ./assets/head/1x/600.png 2x" media="(max-width: 37.5em)">
+      <source srcset="assets/head/1x/900.png 1x, ./assets/head/1x/900.png 2x" media="(max-width: 56.25em)">
+      <source srcset="assets/head/1x/1200.png 1x, ./assets/head/1x/1200.png 2x" media="(max-width: 75em)">
+      <img class="menuImage" srcset="assets/head/1x/1800.png 1x, ./assets/head/1x/1800.png 2x">
+    </picture>
+    <nav class="menu">
+      <a class="menu__element" href="./start.html">Start</a>
+      <a class="menu__element" href="./proizvodi.html">Proizvodi</a>
+      <a class="menu__element" href="./kontakt.html">Kontakt</a>
+    </nav>
+  </div>
+   
+    <nav class="menu--mobile">
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"
+        ><span class="navicon"></span
+      ></label>
+      <ul class="menu--mobile__list">
+        <li><a class="menu--mobile__element" href="./start.html">Start</a></li>
+        <li>
+          <a class="menu--mobile__element" href="./proizvodi.html">Proizvodi</a>
+        </li>
+        <li>
+          <a class="menu--mobile__element" href="./kontakt.html">Kontakt</a>
+        </li>
+      </ul>
+    </nav>
+
+    <aside class="us">
+      <div class="us__card">
+      <img class="us__cardImg" src="./assets/merisa.png" alt="">
+      <div class="us__cardName">Čeliković Merisa</div>
+    </div>
+    <div class="us__card">
+      <img class="us__cardImg" src="./assets/rijad.png" alt="">
+      <div class="us__cardName">Buljubašić Rijad</div>
+    </div>
+    <div class="us__card">
+      <img class="us__cardImg" src="./assets/ismail.png" alt="">
+      <div class="us__cardName">Brkić Ismail</div>
+    </div>
+
+    </aside>
+
+    <div class="videoContainer">
+      <video autoplay loop src="./assets/video.mp4"></video>
+      <div class="videoOverlay">
+        <a href="facebook.com"><img class="downIcon" src="./assets/icons/down.png"></a>
+    
+      </div>
+      
+    </div>
+
+    <section class="mainSectionContainer">
+      
+        
+        <main class="mainSection">
+          <h3 class="mainSection__title">NOVOSTI</h3>
+          <div class="mainSection__card">
+           <p class="couponParagraph couponParagraph--title">AUDI Kupon <br><span class="couponParagraph--title__p">10% OFF</span></p> 
+           <p class="couponParagraph couponParagraph--coupon">KL345n</p> 
+           <p class="couponParagraph couponParagraph--until">DO: 25.06.2022.</p> 
+
+          </div>
+          <div class="mainSection__card">
+            
+            <p class="mainSection__cardText">Uvijek smo otvoreni za saradnju.</p>
+            <p class="mainSection__cardText mainSection__cardText--a"><a href="#open-modal">Kontaktirajte nas!</a></p>
+
+            </div><div class="mainSection__card">
+            <p class="couponParagraph couponParagraph--title">BMW Kupon <br><span class="couponParagraph--title__p">12% OFF</span></p> 
+            <p class="couponParagraph couponParagraph--coupon">SWB341</p> 
+            <p class="couponParagraph couponParagraph--until">SAMO DANAS!</p> 
+ 
+           </div><div class="mainSection__card"><img src="./assets/bijeli.png" alt=""><p class="mainSection__cardText--new">NOVA PONUDA</p></div>
+          <div class="mainSection__card"><img src="./assets/crni.png" alt=""><p class="mainSection__cardText--new">LIMITED EDITION</p></div>
+     
+
+          
+        </main>
+      </main>
+
+      <aside class="clientsSection">
+        <div class="clientsSection__card">
+          <img src="./assets/audi.png" alt="">
+          <p class="clientsSection__cardText">Since 2014</p>
+        </div>
+        <div class="clientsSection__card"
+        > <img src="./assets/bmw.png" alt=""> <p class="clientsSection__cardText">Since 2016</p></div>
+       
+        <div class="clientsSection__card"> <img src="./assets/vw.png" alt=""> <p class="clientsSection__cardText">Since 2010</p></div>
+   
+      </aside>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__text">Dizajnirali: Merisa Čeliković, Rijad Buljubašić, Ismail Brkić <br> 2021. godina</div>
+    </footer>
+  </body>
+</html>

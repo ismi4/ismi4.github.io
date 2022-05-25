@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sass/main.css" />
+    <title>Shop</title>
+  </head>
+  <body>
+    <div id="open-modal" class="modal-window">
+      <div>
+        <a href="#modal-close" title="Close" class="modal-close"
+          >close &times;</a
+        >
+        <h1>CSS Modal</h1>
+        <div>The quick brown fox jumped over the lazy dog.</div>
+      </div>
+    </div>
+    <div class="animate1">
+      <div class="headerBackground"></div>
+
+      <header class="header">
+        <span class="header__icon"
+          ><a href="facebook.com"
+            ><img
+              class="header__iconImg"
+              src="./assets/icons/fb.svg"
+              alt="Facebook page" /></a
+        ></span>
+        <span class="header__icon"
+          ><a href="instagram.com"
+            ><img
+              class="header__iconImg"
+              src="./assets/icons/in.svg"
+              alt="Instagram page" /></a
+        ></span>
+        <span class="header__icon"
+          ><a href="twitter.com"
+            ><img
+              class="header__iconImg"
+              src="./assets/icons/tw.svg"
+              alt="Twitter page" /></a
+        ></span>
+      </header>
+      <picture>
+        <source
+          srcset="assets/head/1x/600.png 1x, ./assets/head/1x/600.png 2x"
+          media="(max-width: 37.5em)"
+        />
+        <source
+          srcset="assets/head/1x/900.png 1x, ./assets/head/1x/900.png 2x"
+          media="(max-width: 56.25em)"
+        />
+        <source
+          srcset="assets/head/1x/1200.png 1x, ./assets/head/1x/1200.png 2x"
+          media="(max-width: 75em)"
+        />
+        <img
+          class="menuImage"
+          srcset="assets/head/1x/1800.png 1x, ./assets/head/1x/1800.png 2x"
+        />
+      </picture>
+    </div>
+    <nav class="menu">
+      <a class="menu__element" href="./start.html">Start</a>
+      <a class="menu__element" href="./proizvodi.html">Proizvodi</a>
+      <a class="menu__element" href="./kontakt.html">Kontakt</a>
+    </nav>
+
+    <nav class="menu--mobile">
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"
+        ><span class="navicon"></span
+      ></label>
+      <ul class="menu--mobile__list">
+        <li><a class="menu--mobile__element" href="./start.html">Start</a></li>
+        <li>
+          <a class="menu--mobile__element" href="./proizvodi.html">Proizvodi</a>
+        </li>
+        <li>
+          <a class="menu--mobile__element" href="./kontakt.html">Kontakt</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="contactBackground"></div>
+<main class="productsContainer">
+
+      <div class="product">
+        <h2 class="product__title">BMW Auto Brm Brm</h2>
+        <img class="product__img" src="/assets/plavi.png" alt="">
+        <div class="product__descCont">
+          <p class="product__desc">
+            Audi A6 e-tron : u sklopu svoje godišnje medijske konferencije
+            2022., Audi je predstavio sljedeći model u svojoj budućoj A6
+            luksuznoj klasi s električnim pogonom: Avant. Kompanija s četiri
+            prstena predstavila je Audi A6 Sportback s električnim pogonskim
+            sistemom prije gotovo godinu dana na sajmu automobila u Šangaju u
+            aprilu 2021. Konceptni automobil A6 Avant e-tron ilustrira Audijev
+            svijet tradicionalnog dizajna: Avant.
+          </p>
+          <p class="product__desc"><span class="product__desc--em">Max. output: </span>476 HP</p>
+          <p class="product__desc"><span class="product__desc--em">Acceleration (0 - 60 mph): </span>5.5 seconds</p>
+          <p class="product__desc"><span class="product__desc--em">Top speed: </span>120mph</p>
+        </div>
+        <div class="product__price">3600 KM</div>
+
+       
+      </div>
+
+      <div class="product">
+        <h2 class="product__title">BMW Auto Brm Brm</h2>
+        
+        <img class="product__img" src="/assets/crni.png" alt="">
+          <div class="product__descCont">
+          <p class="product__desc">
+            Audi A6 e-tron : u sklopu svoje godišnje medijske konferencije
+            2022., Audi je predstavio sljedeći model u svojoj budućoj A6
+            luksuznoj klasi s električnim pogonom: Avant. Kompanija s četiri
+            prstena predstavila je Audi A6 Sportback s električnim pogonskim
+            sistemom prije gotovo godinu dana na sajmu automobila u Šangaju u
+            aprilu 2021. Konceptni automobil A6 Avant e-tron ilustrira Audijev
+            svijet tradicionalnog dizajna: Avant.
+          </p>
+          <p class="product__desc"><span class="emphasizeDesc"></span>Max. output: </span> 476 HP</p>
+          <p class="product__desc"><span class="emphasizeDesc">Acceleration (0 - 60 mph): </span>5.5 seconds</p>
+          <p class="product__desc"><span class="emphasizeDesc"></span>Top speed: </span>120mph</p>
+        
+        </div>
+      </div>
+
+      <div class="product">
+        <h2 class="product__title">BMW Auto Brm Brm</h2>
+        
+        <img class="product__img" src="/assets/bijeli.png" alt="">
+          <div class="product__descCont">
+          <p class="product__desc">
+            Audi A6 e-tron : u sklopu svoje godišnje medijske konferencije
+            2022., Audi je predstavio sljedeći model u svojoj budućoj A6
+            luksuznoj klasi s električnim pogonom: Avant. Kompanija s četiri
+            prstena predstavila je Audi A6 Sportback s električnim pogonskim
+            sistemom prije gotovo godinu dana na sajmu automobila u Šangaju u
+            aprilu 2021. Konceptni automobil A6 Avant e-tron ilustrira Audijev
+            svijet tradicionalnog dizajna: Avant.
+          </p>
+          <p class="product__desc"><span class="emphasizeDesc"></span>Max. output: </span> 476 HP</p>
+          <p class="product__desc"><span class="emphasizeDesc">Acceleration (0 - 60 mph): </span>5.5 seconds</p>
+          <p class="product__desc"><span class="emphasizeDesc"></span>Top speed: </span>120mph</p>
+        </div>
+       
+      </div>
+      <div class="product">
+        <h2 class="product__title">BMW Auto Brm Brm</h2>
+        
+        <div class="product__img">
+          <div class="product__descCont">
+          <p class="product__desc">
+            Audi A6 e-tron : u sklopu svoje godišnje medijske konferencije
+            2022., Audi je predstavio sljedeći model u svojoj budućoj A6
+            luksuznoj klasi s električnim pogonom: Avant. Kompanija s četiri
+            prstena predstavila je Audi A6 Sportback s električnim pogonskim
+            sistemom prije gotovo godinu dana na sajmu automobila u Šangaju u
+            aprilu 2021. Konceptni automobil A6 Avant e-tron ilustrira Audijev
+            svijet tradicionalnog dizajna: Avant.
+          </p>
+          <p class="product__desc"><span class="emphasizeDesc"></span>Max. output: </span> 476 HP</p>
+          <p class="product__desc"><span class="emphasizeDesc">Acceleration (0 - 60 mph): </span>5.5 seconds</p>
+          <p class="product__desc"><span class="emphasizeDesc"></span>Top speed: </span>120mph</p>
+        </div>
+        </div>
+      </div>
+
+      <div class="product">
+        <h2 class="product__title">BMW Auto Brm Brm</h2>
+        
+        <div class="product__img">
+          <div class="product__descCont">
+          <p class="product__desc">
+            Audi A6 e-tron : u sklopu svoje godišnje medijske konferencije
+            2022., Audi je predstavio sljedeći model u svojoj budućoj A6
+            luksuznoj klasi s električnim pogonom: Avant. Kompanija s četiri
+            prstena predstavila je Audi A6 Sportback s električnim pogonskim
+            sistemom prije gotovo godinu dana na sajmu automobila u Šangaju u
+            aprilu 2021. Konceptni automobil A6 Avant e-tron ilustrira Audijev
+            svijet tradicionalnog dizajna: Avant.
+          </p>
+          <p class="product__desc"><span class="emphasizeDesc"></span>Max. output: </span> 476 HP</p>
+          <p class="product__desc"><span class="emphasizeDesc">Acceleration (0 - 60 mph): </span>5.5 seconds</p>
+          <p class="product__desc"><span class="emphasizeDesc"></span>Top speed: </span>120mph</p>
+        </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__text">
+        Dizajnirali: Merisa Čeliković, Rijad Buljubašić, Ismail Brkić <br />
+        2021. godina
+      </div>
+    </footer>
+  </body>
+</html>

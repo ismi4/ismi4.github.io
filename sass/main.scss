@@ -1,0 +1,1207 @@
+$color-background-header: grey;
+$color-gold: rgb(237, 184, 121);
+
+//rgb(4, 47, 102)
+$color-blue: #042f66;
+$color-blue-lighter: #235391;
+$color-blue-with-opacity: rgba(4, 47, 102, 0.8);
+
+@font-face {
+  font-family: "montserrat";
+  src: url("../assets/fonts/Montserrat-Light.ttf") format("ttf"),
+    url("../assets/fonts/Montserrat-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      //600px
+      @content;
+    }
+  }
+
+  @if $breakpoint == s-phone {
+    @media (max-width: 33.76em) {
+      //380px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      //900px
+      @content;
+    }
+  }
+
+  @if $breakpoint == aside-break {
+    @media (max-height: 25.875em) {
+      //350px
+      @content;
+    }
+  }
+
+  @if $breakpoint == header-break-1 {
+    @media (max-width: 60.625em) {
+      //970px
+      @content;
+    }
+  }
+
+  @if $breakpoint == header-break-2 {
+    @media (max-width: 46.25em) {
+      //740px
+      @content;
+    }
+  }
+
+  @if $breakpoint == grid-break-1 {
+    @media (max-width: 48.75em) {
+      //780px
+      @content;
+    }
+  }
+
+  @if $breakpoint == grid-break-2 {
+    @media (max-width: 43.75em) {
+      //780px
+      @content;
+    }
+  }
+
+  @if $breakpoint == grid-break-3 {
+    @media (max-width: 20em) {
+      //420px
+      @content;
+    }
+  }
+
+  @if $breakpoint == product-image-break {
+    @media (max-width: 34.7em) {
+      //555px
+      @content;
+    }
+  }
+
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      //1200px
+      @content;
+    }
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (max-width: 118.75em) {
+      //1900px/16 = 118.75em
+      @content;
+    }
+  }
+}
+
+html {
+  font-size: 62.5%; //16px je default browser font. Ova linija definise 1 rem = 10px
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(phone) {
+    font-size: 50%;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: montserrat;
+}
+
+.header {
+  background: transparent;
+  height: 2rem;
+  padding-left: 4rem;
+
+  &__icon {
+    height: 2rem;
+    display: inline-block;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    a {
+      position: relative;
+      z-index: 9999;
+      display: inline-block;
+    }
+  }
+
+  &__iconImg {
+    margin-top: 1.3rem;
+    margin-right: 1rem;
+
+    @include respond(big-desktop) {
+      width: 2.8rem;
+    }
+
+    @include respond(tab-land) {
+      margin-top: 1.4rem;
+    }
+
+    @include respond(header-break-1) {
+      margin-top: 1rem;
+      width: 2.7rem;
+    }
+
+    @include respond(header-break-2) {
+      margin-top: 1rem;
+      width: 2.3rem;
+    }
+
+    @include respond(phone) {
+      margin-top: 0.9rem;
+      width: 2.5rem;
+    }
+
+    @include respond(s-phone) {
+      margin-top: 0.9rem;
+      width: 2.6rem;
+    }
+  }
+}
+
+.menu {
+  padding-right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  opacity: 100%;
+
+  @include respond(big-desktop) {
+    height: 2.4rem;
+  }
+
+  @include respond(tab-land) {
+    height: 3rem;
+  }
+
+  @include respond(header-break-1) {
+    height: 2.6rem;
+  }
+
+  @include respond(tab-port) {
+    height: 2.5rem;
+  }
+  @include respond(header-break-2) {
+    height: 1rem;
+    padding-right: 2.3rem;
+  }
+
+  @include respond(phone) {
+    display: none;
+  }
+
+  &__element {
+    z-index: 3000;
+    margin: 0 2rem;
+    text-transform: uppercase;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 200;
+    color: inherit;
+    justify-content: center;
+    transition: all 0.2s linear;
+    color: white;
+
+    &:hover {
+      color: $color-gold;
+      font-weight: 400;
+    }
+
+    @include respond(big-desktop) {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+    }
+
+    @include respond(tab-land) {
+      font-size: 1.5rem;
+    }
+
+    @include respond(tab-port) {
+      margin-right: 0;
+      font-size: 1.7rem;
+    }
+
+    @include respond(header-break-2) {
+      font-size: 1.3rem;
+      margin: 0 1.2rem;
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+.menuImage {
+  background-color: rgba($color: #000000, $alpha: 0.3);
+
+  position: fixed;
+  width: 100%;
+  padding-bottom: 1rem;
+
+  @include respond(s-phone) {
+    top: 1.9rem;
+  }
+}
+
+.menu--mobile {
+  display: none;
+  position: relative;
+  z-index: 999999;
+  height: 3.5rem;
+
+  @include respond(phone) {
+    display: block;
+  }
+
+  &__element {
+    position: relative;
+    background-color: $color-blue;
+    color: white;
+    text-align: right;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    padding-top: 4rem;
+    list-style: none;
+    overflow: hidden;
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+
+  a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+      background-color: #f4f4f4;
+    }
+  }
+}
+
+.menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 5px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.menu-btn {
+  display: none;
+
+  &:checked ~ .menu--mobile__list {
+    max-height: 240px;
+  }
+
+  &:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+  &:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+  &:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+
+  &:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+}
+
+.navicon {
+  background: white;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background 0.2s ease-out;
+  width: 18px;
+
+  &:before {
+    top: 5px;
+  }
+
+  &:after {
+    top: -5px;
+  }
+
+  &:before,
+  &:after {
+    background: white;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+}
+
+@media (min-width: 48em) {
+  .menu--mobile__list li {
+    float: right;
+  }
+  .menu--mobile__list li a {
+    padding: 20px 30px;
+  }
+  .menu--mobile__list {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .menu--mobile__list .menu-icon {
+    display: none;
+  }
+}
+
+.videoContainer {
+  position: relative;
+  text-align: center;
+  z-index: -100;
+  margin-top: -6rem;
+  width: 100%;
+  background-image: linear-gradient(to right, $color-blue-with-opacity, black),
+    url(../assets/background.jpg);
+  background-size: cover;
+  background-position: bottom;
+
+  video {
+    width: 100%;
+    @include respond(phone) {
+      margin-top: -4rem;
+    }
+  }
+}
+
+.us {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5.75rem;
+  left: -33rem;
+  width: 35rem;
+  height: 80%;
+  background-color: #000;
+  transition: all 0.3s;
+  justify-content: center;
+  align-items: center;
+  border-right: $color-gold 4px solid;
+  flex-wrap: wrap;
+  z-index: 1000000;
+  @include respond(aside-break) {
+    width: 60rem;
+    left: -59rem;
+  }
+
+  &__card {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  &__cardImg {
+    width: 10rem;
+    border: $color-gold 1px solid;
+    border-radius: 50%;
+    margin-bottom: 0.5rem;
+  }
+
+  &__cardName {
+    color: $color-gold;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  &:hover {
+    left: -1rem;
+  }
+}
+
+.mainSectionContainer {
+  background-image: linear-gradient(to right, $color-blue, black);
+  font-size: 3rem;
+  width: 100%;
+  padding-bottom: 7rem;
+  display: flex;
+  justify-content: space-around;
+  @include respond(grid-break-1) {
+    flex-direction: column-reverse;
+  }
+  @include respond(phone) {
+    background-image: linear-gradient(to top, $color-blue, black);
+  }
+}
+
+.mainSection {
+  margin-top: 5rem;
+  flex-basis: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+
+  @include respond(phone) {
+    margin-top: 0rem;
+  }
+
+  &__cardText {
+    padding: 1.5rem;
+    text-align: center;
+
+    @include respond(grid-break-1) {
+      font-size: 4rem;
+    }
+
+    &--a {
+      text-decoration: none;
+      text-transform: uppercase;
+      text-decoration-style: none;
+      font-weight: bolder;
+      color: $color-blue;
+      transition: all 0.2s linear;
+
+      &:hover {
+        color: $color-blue-lighter;
+        cursor: pointer;
+      }
+    }
+
+    &--new {
+      text-align: center;
+      @include respond(grid-break-1) {
+        font-size: 4rem;
+      }
+    }
+  }
+
+  &__title {
+    color: white;
+    font-weight: bold;
+    height: 5rem;
+    flex-basis: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 1rem;
+    &:nth-child(3n + 1) {
+      margin-right: 0rem;
+    }
+    margin-bottom: 1rem;
+
+    width: 30%;
+    height: 28rem;
+
+    transition: all 0.1s ease-in;
+
+    img {
+      width: 80%;
+    }
+
+    &:nth-child(2) {
+      background-image: linear-gradient(to top, rgb(255, 226, 162), white);
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &:nth-child(3) {
+      background-image: linear-gradient(to top, rgb(255, 226, 162), white);
+      justify-content: center;
+    }
+
+    &:nth-child(4) {
+      background-image: linear-gradient(210deg, rgb(255, 226, 162), white);
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &:nth-child(5) {
+      cursor: pointer;
+      background-color: white;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &:nth-child(6) {
+      cursor: pointer;
+      background-color: white;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    @include respond(tab-port) {
+      width: 40%;
+      height: 39rem;
+      margin-right: 3rem !important;
+      margin-bottom: 3rem !important;
+      &:nth-child(2n + 1) {
+        margin-right: 0rem;
+      }
+    }
+    @include respond(grid-break-1) {
+      width: 70%;
+      height: 80rem;
+      margin-right: 3rem !important;
+      margin-bottom: 3rem !important;
+      &:nth-child(2n + 1) {
+        margin-right: 0rem;
+      }
+    }
+
+    @include respond(grid-break-2) {
+      width: 80%;
+      height: 70rem;
+      margin-right: 0rem !important;
+      margin-bottom: 3rem !important;
+    }
+
+    @include respond(grid-break-3) {
+      width: 90%;
+      height: 50rem;
+      margin-right: 0rem !important;
+      margin-bottom: 2rem !important;
+    }
+  }
+}
+
+.clientsSection {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 15%;
+  height: 49rem;
+
+  @include respond(grid-break-1) {
+    align-self: center;
+
+    flex-basis: auto;
+    width: 80%;
+    flex-direction: row;
+    height: 22rem;
+  }
+
+  @include respond(grid-break-2) {
+    height: 20rem;
+  }
+
+  @include respond(phone) {
+    height: 21rem;
+    width: 70%;
+  }
+
+  @include respond(s-phone) {
+    height: 17rem;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    @include respond(grid-break-1) {
+      height: 100%;
+    }
+    @include respond(phone) {
+      :nth-child(1) {
+        margin-right: 8rem;
+      }
+
+      :nth-child(2) {
+        margin-right: 8rem;
+      }
+
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+  &__cardText {
+    font-weight: bold;
+    color: white;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: center;
+    font-style: italic;
+
+    @include respond(tab-land) {
+      font-size: 1.6rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.9rem;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  height: 10rem;
+  width: 100%;
+  background-color: $color-blue;
+  border-top: whitesmoke 1px solid;
+  color: white;
+  &__text {
+    text-align: center;
+
+    font-size: 1.4rem;
+
+    @include respond(tab-land) {
+      font-size: 1.6rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 1.8rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.9rem;
+    }
+  }
+}
+
+.contactBackground {
+  z-index: -99999;
+  position: fixed;
+  top: 0;
+  background-image: linear-gradient(to right, $color-blue-with-opacity, black),
+    url(../assets/background.svg);
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 100vh;
+}
+
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  margin-top: 5rem;
+  color: white;
+  width: 80%;
+  padding: 1rem 2rem;
+
+  @include respond(phone) {
+    width: 90%;
+    margin-top: 0rem;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 3rem;
+
+    @include respond(tab-land) {
+      font-size: 3.2rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 3.4rem;
+    }
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
+  }
+
+  &__paragraph {
+    font-size: 1.7rem;
+    margin-top: 1rem;
+
+    @include respond(tab-land) {
+      font-size: 2rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 2.3rem;
+    }
+
+    @include respond(phone) {
+      font-size: 2rem;
+    }
+  }
+}
+
+.cardBoxContainer {
+  margin: 0 auto;
+  margin-top: 2.5rem;
+  display: flex;
+  width: 80%;
+  @include respond(phone) {
+    width: 80%;
+    flex-direction: column;
+  }
+  & :nth-child(1) {
+    margin-right: 2rem;
+    @include respond(phone) {
+      margin-right: 0;
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.cardBox {
+  background-color: $color-blue;
+  flex: 1;
+  color: white;
+  padding: 1rem 2rem;
+  padding-bottom: 2rem;
+
+  box-shadow: 2px 2px 9px 2px rgba(255, 255, 255, 0.9);
+  transition: all 0.3s linear;
+
+  @include respond(phone) {
+    align-self: center;
+    width: 100%;
+  }
+
+  &:hover {
+    background-color: $color-blue-lighter;
+    box-shadow: 2px 2px 9px 2px $color-blue;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 3rem;
+
+    @include respond(tab-land) {
+      font-size: 3.2rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 3.4rem;
+    }
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
+  }
+
+  &__paragraph {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+
+    @include respond(tab-land) {
+      font-size: 2rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 2.2rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.9rem;
+    }
+  }
+}
+
+.buttonContainer {
+  width: 100%;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.contactButton {
+  border: white 1px solid;
+  font-weight: bold;
+  background-color: $color-blue;
+  font-size: 2.5rem;
+  padding: 1rem 2rem;
+  display: block;
+  margin: 0 auto;
+  transition: all 0.2s ease-out;
+  color: white;
+  width: 35rem;
+  height: 7rem;
+  margin-top: 3rem;
+
+  @include respond(tab-land) {
+    font-size: 2.2rem;
+    width: 30rem;
+    height: 6rem;
+  }
+
+  @include respond(tab-port) {
+    font-size: 2.2rem;
+    width: 28rem;
+    height: 7rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.1rem;
+    width: 28rem;
+    height: 7rem;
+  }
+
+  &:hover {
+    background-color: white;
+    color: $color-blue;
+    border: $color-blue 2px solid;
+    cursor: pointer;
+  }
+}
+
+.modal-window {
+  position: fixed;
+  background-color: rgba(200, 200, 200, 0.75);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.modal-window:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-window > div {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 2rem;
+  background: #fff;
+  color: #444;
+}
+
+.modal-window header {
+  font-weight: bold;
+}
+
+.modal-close {
+  color: #aaa;
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+  text-decoration: none;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+.modal-window h1 {
+  font-size: 150%;
+  margin: 0 0 15px;
+}
+
+.container {
+  margin-top: 15rem;
+  min-height: 75vh;
+  @include respond(phone) {
+    margin-top: 1.5rem;
+  }
+}
+
+.headerBackground {
+  position: fixed;
+  top: 0;
+  height: 2rem;
+  width: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+}
+
+.animate1 {
+  animation-name: topToBottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes topToBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  80% {
+    opacity: 0.8;
+    transform: translateY(5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.productsContainer {
+  margin: 0 auto;
+  margin-top: 7rem;
+  width: 85%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.product {
+  padding: 1rem 1rem 1rem 3rem;
+  border: $color-gold 1px solid;
+  margin-bottom: 2rem;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: black;
+  }
+
+  @include respond(phone) {
+    width: 90%;
+  }
+
+  &__desc {
+    margin-top: 1rem;
+    color: white;
+
+    @include respond(big-desktop) {
+      font-size: 1.6rem;
+    }
+
+    @include respond(tab-land) {
+      font-size: 1.8rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 2rem;
+    }
+
+    @include respond(phone) {
+      font-size: 2.3rem;
+      margin-top: 3rem;
+    }
+
+    &--em {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $color-gold;
+    }
+  }
+
+  &__title {
+    width: fit-content;
+    padding: 1rem 0;
+    color: white;
+    transition: all 0.4s linear;
+
+    &:hover {
+      color: $color-gold;
+    }
+
+    font-size: 2.2rem;
+
+    @include respond(tab-land) {
+      font-size: 2.9rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 3rem;
+    }
+
+    @include respond(phone) {
+      font-size: 3rem;
+    }
+  }
+
+  &__img {
+    padding: 1rem 0;
+    margin: 0 auto;
+    width: 75%;
+    background-repeat: no-repeat;
+    background-size: auto;
+    transition: all 0.4s ease-out;
+
+    @include respond(tab-port) {
+      width: 85%;
+    }
+
+    @include respond(product-image-break) {
+      width: 88%;
+    }
+
+    @include respond(phone) {
+      width: 90%;
+    }
+  }
+
+  &__descCont {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__price {
+    font-weight: bold;
+    color: $color-blue;
+    padding: 1rem 0;
+    background-color: $color-gold;
+    width: 12rem;
+    text-align: center;
+    font-size: 1.7rem;
+    align-self: flex-end;
+
+    @include respond(tab-land) {
+      font-size: 2.3rem;
+      width: 14rem;
+    }
+
+    @include respond(tab-port) {
+      width: 15rem;
+      font-size: 2.5rem;
+    }
+
+    @include respond(phone) {
+      font-size: 2.3rem;
+      margin-top: 3rem;
+    }
+  }
+}
+
+.couponParagraph {
+  color: white;
+
+  text-align: center;
+
+  &--title {
+    color: black;
+    @include respond(grid-break-1) {
+      font-size: 4rem;
+    }
+
+    &__p {
+      color: red;
+      font-weight: bolder;
+      font-size: 4rem;
+
+      @include respond(grid-break-1) {
+        font-size: 7rem;
+      }
+    }
+  }
+
+  &--coupon {
+    border: $color-blue-lighter 3px solid;
+    padding: 1rem 2rem;
+    color: $color-blue;
+    transition: all 0.3s ease-out;
+    font-weight: bolder;
+    font-size: 5rem;
+    @include respond(grid-break-1) {
+      font-size: 7rem;
+    }
+
+    &:hover {
+      background-color: $color-blue;
+      color: white;
+      transform: scale(1.1);
+    }
+  }
+
+  &--until {
+    font-size: 2rem;
+    color: black;
+    @include respond(grid-break-1) {
+      font-size: 3rem;
+    }
+  }
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.downIcon {
+  width: 100%;
+  height: 100%;
+  &:hover {
+    cursor: pointer;
+    background-color: red;
+  }
+}
+
+.videoOverlay {
+  a {
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+  }
+
+  position: absolute;
+  top: 90%;
+  left: 50%;
+
+  @include respond(phone) {
+    display: none;
+  }
+}

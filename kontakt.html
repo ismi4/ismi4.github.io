@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./sass/main.css" />
+    <title>Shop</title>
+  </head>
+  <body>
+    <div id="open-modal" class="modal-window">
+      <div>
+        <a href="#modal-close" title="Close" class="modal-close"
+          >close &times;</a
+        >
+        <h1>CSS Modal</h1>
+        <div>The quick brown fox jumped over the lazy dog.</div>
+      </div>
+    </div>
+    <div class="animate1">
+      <div class="headerBackground"></div>
+
+      <header class="header">
+        <span class="header__icon"
+          ><a href="facebook.com"
+            ><img
+              class="header__iconImg"
+              src="./assets/icons/fb.svg"
+              alt="Facebook page" /></a
+        ></span>
+        <span class="header__icon"
+          ><a href="instagram.com"
+            ><img
+              class="header__iconImg"
+              src="./assets/icons/in.svg"
+              alt="Instagram page" /></a
+        ></span>
+        <span class="header__icon"
+          ><a href="twitter.com"
+            ><img
+              class="header__iconImg"
+              src="./assets/icons/tw.svg"
+              alt="Twitter page" /></a
+        ></span>
+      </header>
+      <picture>
+        <source
+          srcset="assets/head/1x/600.png 1x, ./assets/head/1x/600.png 2x"
+          media="(max-width: 37.5em)"
+        />
+        <source
+          srcset="assets/head/1x/900.png 1x, ./assets/head/1x/900.png 2x"
+          media="(max-width: 56.25em)"
+        />
+        <source
+          srcset="assets/head/1x/1200.png 1x, ./assets/head/1x/1200.png 2x"
+          media="(max-width: 75em)"
+        />
+        <img
+          class="menuImage"
+          srcset="assets/head/1x/1800.png 1x, ./assets/head/1x/1800.png 2x"
+        />
+      </picture>
+    </div>
+    <nav class="menu">
+      <a class="menu__element" href="./start.html">Start</a>
+      <a class="menu__element" href="./proizvodi.html">Proizvodi</a>
+      <a class="menu__element" href="./kontakt.html">Kontakt</a>
+    </nav>
+
+    <nav class="menu--mobile">
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+      <label class="menu-icon" for="menu-btn"
+        ><span class="navicon"></span
+      ></label>
+      <ul class="menu--mobile__list">
+        <li><a class="menu--mobile__element" href="./start.html">Start</a></li>
+        <li>
+          <a class="menu--mobile__element" href="./proizvodi.html">Proizvodi</a>
+        </li>
+        <li>
+          <a class="menu--mobile__element" href="./kontakt.html">Kontakt</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="contactBackground"></div>
+
+    <div class="container">
+      <section class="infoCard">
+        <h3 class="infoCard__title">Šta možete pronaći na našoj stranici?</h3>
+        <p class="infoCard__paragraph">
+          Na našoj web stranici možete iskoristiti prednosti nekoliko
+          internetskih tehnologija iz udobnosti svog doma. Zapamtite, ako
+          trebate razgovarati s nama, udaljeni smo samo jedan telefonski poziv.
+          Naš prodajni tim je na raspolaganju da vam pomogne sa svim vašim
+          automobilskim potrebama. Slobodno navratite u trgovinu u bilo koje
+          vrijeme kako biste nas upoznali. Pozivamo vas da pogledate našu ponudu
+          i uživate u iskustvu kupnje automobila bez pritiska.
+        </p>
+      </section>
+
+      <main class="cardBoxContainer">
+        <section class="cardBox">
+          <h3 class="cardBox__title">Ko smo mi?</h3>
+          <p class="cardBox__paragraph">
+            Kompanija GEAR CORNER sa sjedištem u Tuzli osnovana je 2010 godine
+            na osnovama tradicije i entuzijazma čija je prvenstvena djelatnost
+            bila servisiranje vozila.
+          </p>
+
+          <p class="cardBox__paragraph">
+            Početkom 2014 godine GEAR CORNER postaje ovlašteni trgovac i
+            serviser marke Audi,BMW, Mercedes i VW-Volkswagen.
+          </p>
+
+          <p class="cardBox__paragraph">
+            Glavno mjerilo prema kojem vrednujemo rezultate jest zadovoljstvo
+            kupca.Stoga ćemo i u budućnosti najveći naglasak stavljati na
+            kvalitetu usluga kao i daljnju izgradnju i modernizaciju.
+          </p>
+        </section>
+
+        <section class="cardBox">
+          <h3 class="cardBox__title">Šta postižemo?</h3>
+          <p class="cardBox__paragraph">
+            Danas GEAR CORNER zauzima vodeće mjesto na regionalnom tržištu Bosne
+            i Hercegovine u prodaji i servisiranju motornih vozila, što
+            potvrđuju poslovni rezultati i kontinuirani rast kompanije.
+          </p>
+
+          <p class="cardBox__paragraph">
+            GEAR CORNER je počeo 2010 godine sa 2 uposlenika, da bi danas GEAR
+            CORNER brojao 40 uposlenika, a taj napredak GEAR CORNER je tokom
+            predhodnih godina ostvario kao rezultat rada njegovih uposlenika,
+            stalnim usavršavanjem, timskim radom, lojalnosti kompaniji.
+          </p>
+        </section>
+      </main>
+      <div class="buttonContainer">
+        <a href="#open-modal">
+          <button class="contactButton">KONTAKTIRAJTE NAS</button></a
+        >
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__text">
+        Dizajnirali: Merisa Čeliković, Rijad Buljubašić, Ismail Brkić <br />
+        2021. godina
+      </div>
+    </footer>
+  </body>
+</html>

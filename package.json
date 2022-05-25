@@ -1,0 +1,10 @@
+{
+  "name": "tptp",
+  "version": "1.0.0",
+  "main": "start.html",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss styles/tptpstil.css -w"
+  },
+  "author": "",
+  "license": "ISC"
+}

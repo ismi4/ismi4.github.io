@@ -6,23 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./sass/main.css" />
     <title>Shop</title>
+    
   </head>
   <body>
     <div id="open-modal" class="modal-window">
       <div>
-        <a href="#modal-close" title="Close" class="modal-close"
-          >close &times;</a
-        >
-        <h1>CSS Modal</h1>
-        <div>The quick brown fox jumped over the lazy dog.</div>
+      <div class="closeContainer">
+      <a href="#modal-close" title="Close" class="modal-close"
+      >close &times;</a
+    ></div>
+      
+      <div class="formContainer">
+
+        <form action="https://google.com" class="form" id="form">
+
+        <div class="formFieldWithErr">
+          <input type="text" name="fname" placeholder="Ime" class="control" data-name="name">
+          <span class="err-txt">Molimo Vas unesite Vaše ime!</span>
+        </div>
+            
+        <div class="formFieldWithErr">
+            <input type="text" name="sname" placeholder="Prezime" class="control" data-name="name">
+            <span class="err-txt">Molimo Vas unesite Vaše prezime!</span>
+        </div>
+
+        <div class="formFieldWithErr">
+          <input type="email" name="email" placeholder="Email" class="control">
+          <span class="err-txt">Molimo Vas unesite Vaš email!</span>
+        </div>
+
+        <div class="formFieldWithErr">
+          <input type="tel" name="phone" placeholder="Broj telefona" class="control">
+          <span class="err-txt">Molimo Vas unesite Vaš broj telefona!.</span>
+        </div>
+
+        
+        <div class="formFieldWithErr">
+          <textarea name="textarea" id="" cols="30" rows="10" placeholder="Poruka" class="control"></textarea>
+          <span class="err-txt">Molimo Vas unesite poruku!</span>
+        </div>
+
+        <div class="formFieldWithErrr">
+          <input type="submit" value="Pošalji" class="btn-submit">
+        </div>
+
+          </form>
       </div>
+    </div>
+
     </div>
     <div class="animate1">
     <div class="headerBackground"></div>
     <header class="header">
-      <span class="header__icon"><a href="facebook.com"><img class="header__iconImg" src="./assets/icons/fb.svg" alt="Facebook page"></a></span>
-      <span class="header__icon"><a href="instagram.com"><img class="header__iconImg" src="./assets/icons/in.svg" alt="Instagram page"></a></span>
-      <span class="header__icon"><a href="twitter.com"><img  class="header__iconImg" src="./assets/icons/tw.svg" alt="Twitter page"></a></span>
+      <span class="header__icon"><a href="https://www.facebook.com/"><img class="header__iconImg" src="./assets/icons/fb.svg" alt="Facebook page"></a></span>
+      <span class="header__icon"><a href="https://www.instagram.com/"><img class="header__iconImg" src="./assets/icons/in.svg" alt="Instagram page"></a></span>
+      <span class="header__icon"><a href="https://www.twitter.com/"><img  class="header__iconImg" src="./assets/icons/tw.svg" alt="Twitter page"></a></span>
     </header>
      <picture>
       <source srcset="assets/head/1x/600.png 1x, ./assets/head/1x/600.png 2x" media="(max-width: 37.5em)">
@@ -109,13 +147,17 @@
 
       <aside class="clientsSection">
         <div class="clientsSection__card">
+          <a href="https://www.audi.ba/">
           <img src="./assets/audi.png" alt="">
-          <p class="clientsSection__cardText">Since 2014</p>
+         
+            <p class="clientsSection__cardText">Since 2014</p>
+          </a>
+          
         </div>
         <div class="clientsSection__card"
-        > <img src="./assets/bmw.png" alt=""> <p class="clientsSection__cardText">Since 2016</p></div>
+        > <a href="https://www.bmw.hr/hr/all-models.html"><img src="./assets/bmw.png" alt=""> <p class="clientsSection__cardText">Since 2016</a></p></div>
        
-        <div class="clientsSection__card"> <img src="./assets/vw.png" alt=""> <p class="clientsSection__cardText">Since 2010</p></div>
+        <div class="clientsSection__card"><a href="https://www.vw.com/en.html"><img src="./assets/vw.png" alt=""> <p class="clientsSection__cardText">Since 2010</a></p></div>
    
       </aside>
     </section>
@@ -123,5 +165,6 @@
     <footer class="footer">
       <div class="footer__text">Dizajnirali: Merisa Čeliković, Rijad Buljubašić, Ismail Brkić <br> 2021. godina</div>
     </footer>
+    <script src="./js/tptpobrazac.js"></script>
   </body>
 </html>

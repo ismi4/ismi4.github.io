@@ -1069,7 +1069,8 @@ html {
 }
 
 .modal-window > div {
-  width: 400px;
+  width: 80rem;
+  height: 50rem;
   position: relative;
   margin: 10% auto;
   padding: 2rem;
@@ -1077,20 +1078,34 @@ html {
   color: #444;
 }
 
+@media (max-width: 37.5em) {
+  .modal-window > div {
+    width: 35rem;
+    height: 60rem;
+  }
+}
+
 .modal-window header {
   font-weight: bold;
+}
+
+.closeContainer {
+  height: 5rem;
+  font-size: 3rem;
+  width: 100%;
 }
 
 .modal-close {
   color: #aaa;
   line-height: 50px;
-  font-size: 80%;
   position: absolute;
   right: 0;
   text-align: center;
   top: 0;
-  width: 70px;
+  width: 20rem;
+  text-align: end;
   text-decoration: none;
+  padding-right: 1rem;
 }
 
 .modal-close:hover {
@@ -1445,5 +1460,32 @@ a:active {
   .videoOverlay {
     display: none;
   }
+}
+
+.form .err-txt {
+  display: none;
+}
+
+.error .err-txt {
+  color: red;
+  font-weight: bold;
+  display: block;
+}
+
+.formContainer {
+  width: 100%;
+  height: 6rem;
+}
+
+.formFieldWithErr {
+  margin-bottom: 2rem;
+}
+
+input {
+  width: 70%;
+}
+
+textarea {
+  width: 70%;
 }
 /*# sourceMappingURL=main.css.map */

@@ -10,11 +10,75 @@
   <body>
     <div id="open-modal" class="modal-window">
       <div>
-        <a href="#modal-close" title="Close" class="modal-close"
-          >close &times;</a
-        >
-        <h1>CSS Modal</h1>
-        <div>The quick brown fox jumped over the lazy dog.</div>
+        <div class="closeContainer">
+          <a href="#modal-close" title="Close" class="modal-close"
+            >close &times;</a
+          >
+        </div>
+
+        <div class="formContainer">
+          <form action="https://google.com" class="form" id="form">
+            <div class="formFieldWithErr">
+              <input
+                type="text"
+                name="fname"
+                placeholder="Ime"
+                class="control"
+                data-name="name"
+              />
+              <span class="err-txt">Molimo Vas unesite Vaše ime!</span>
+            </div>
+
+            <div class="formFieldWithErr">
+              <input
+                type="text"
+                name="sname"
+                placeholder="Prezime"
+                class="control"
+                data-name="name"
+              />
+              <span class="err-txt">Molimo Vas unesite Vaše prezime!</span>
+            </div>
+
+            <div class="formFieldWithErr">
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                class="control"
+              />
+              <span class="err-txt">Molimo Vas unesite Vaš email!</span>
+            </div>
+
+            <div class="formFieldWithErr">
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Broj telefona"
+                class="control"
+              />
+              <span class="err-txt"
+                >Molimo Vas unesite Vaš broj telefona!.</span
+              >
+            </div>
+
+            <div class="formFieldWithErr">
+              <textarea
+                name="textarea"
+                id=""
+                cols="30"
+                rows="10"
+                placeholder="Poruka"
+                class="control"
+              ></textarea>
+              <span class="err-txt">Molimo Vas unesite poruku!</span>
+            </div>
+
+            <div class="formFieldWithErrr">
+              <input type="submit" value="Pošalji" class="btn-submit" />
+            </div>
+          </form>
+        </div>
       </div>
     </div>
     <div class="animate1">
@@ -22,21 +86,21 @@
 
       <header class="header">
         <span class="header__icon"
-          ><a href="facebook.com"
+          ><a href="https://www.facebook.com/"
             ><img
               class="header__iconImg"
               src="./assets/icons/fb.svg"
               alt="Facebook page" /></a
         ></span>
         <span class="header__icon"
-          ><a href="instagram.com"
+          ><a href="https://www.instagram.com/"
             ><img
               class="header__iconImg"
               src="./assets/icons/in.svg"
               alt="Instagram page" /></a
         ></span>
         <span class="header__icon"
-          ><a href="twitter.com"
+          ><a href="https://www.twitter.com/"
             ><img
               class="header__iconImg"
               src="./assets/icons/tw.svg"
@@ -96,7 +160,9 @@
           Naš prodajni tim je na raspolaganju da vam pomogne sa svim vašim
           automobilskim potrebama. Slobodno navratite u trgovinu u bilo koje
           vrijeme kako biste nas upoznali. Pozivamo vas da pogledate našu ponudu
-          i uživate u iskustvu kupnje automobila bez pritiska.
+          i uživate u iskustvu kupnje automobila bez pritiska. <br /><br />
+          Dostava je besplatna za područje Bosne i Hercegovine, a za dostavu na
+          širem području kontaktirajte nas!
         </p>
       </section>
 
@@ -150,5 +216,6 @@
         2021. godina
       </div>
     </footer>
+    <script src="./js/tptpobrazac.js"></script>
   </body>
 </html>
